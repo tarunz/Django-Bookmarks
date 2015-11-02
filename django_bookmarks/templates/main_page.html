@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block head %}{{ head_title }}{% endblock %}
+        <!-- <p>{{ page_body}}</p> -->
+        {%block content %}
+        {% if user.username %}
+        <div class="row vertical-offset-100">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">                                
+                                    <div class="row-fluid user-row">
+                                        <img src="{% static 'logo_sm_2_mr_1.png' %}" class="img-responsive" alt="Conxole Admin"/>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                	<center><a href="/user/{{ user.username }}"/>
+                                		<input class="btn btn-lg btn-success btn-block" type="submit" value="Click Here"/></center></a> <br/> 
+                                	<center>Welcome to django bookmarks {{user.username }} !
+                                	Here you can store and share your bookmarks !</center>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <br/>
+            {% else %}
+            	<div class="row vertical-offset-100">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">                                
+                                    <div class="row-fluid user-row">
+                                        <img src="{% static 'logo_sm_2_mr_1.png' %}" class="img-responsive" alt="Conxole Admin"/>
+                                        <center>Welcome to django bookmarks</center>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <a href="/login" class="btn btn-lg btn-primary btn-block">login»</a>
+                                    <a href="/register" class="btn btn-lg btn-warning btn-block">New Here? Register</a>
+                                </div>
+                                <div class="panel-footer">
+                        			<a href="/">Home</a>&nbsp;&nbsp;&nbsp;
+                        			<a href="/register">Register</a>&nbsp;&nbsp;&nbsp;SHATA&copy
+                        		</div>
+                            </div>
+                        </div>
+                </div>
+            {% endif %}
+        {% endblock %}

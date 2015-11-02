@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Django Bookmarks - User: {{username}} {% endblock %}
+{% block head %}Bookmarks for {{username}}{% endblock %}
+{% block content %}
+		<div class="row vertical-offset-100">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">                                
+                                    <div class="row-fluid user-row">
+                                        <h2>Your Tags</h2>
+                                        {% include 'bookmark_list.html' %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+{% endblock %}

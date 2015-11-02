@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} User Login {% endblock %}
+{% block head %}User Login {% endblock %}
+{% block content %}
+		{% if form.has_errors %}
+		<p> Invalid Username or Password.
+			Please try again.</p>
+		{% endif %}
+		<div class="row vertical-offset-100">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form method="post" action='.'>{% csrf_token %}<center>
+                            <p> <label for="id_username">UserName</label>
+								{{form.username}}</p>
+							<p><label for="id_password">Password</label>
+								{{form.password}}</p>
+							<input type="hidden" name="next" value="/"/></center>
+							<br>
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="LogIn"/>
+                    </form>
+                </div>
+                <div class="panel-footer">
+        			<a href="/">Home</a>&nbsp;&nbsp;&nbsp;
+        			<a href="/register">Register</a>&nbsp;&nbsp;&nbsp;SHATA&copy
+        		</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

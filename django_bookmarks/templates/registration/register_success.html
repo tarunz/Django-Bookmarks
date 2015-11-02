@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+   {% block title %}Registration Successful{% endblock %}
+   {% block head %}
+     Registration Completed Successfully
+   {% endblock %}
+   {% block content %}
+   <div class="row vertical-offset-100">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+					  <h2><center>Success</center></h2>
+					  <center>
+					  <p>Thank you for registering. Your information has been
+				     saved in the database. Now you can either
+				     <strong>login</strong> or go back to the
+				     <strong>main page</strong>.</center></p>
+				     <br>
+				     <a href="/login/">
+				     <input class="btn btn-lg btn-primary btn-block" value="LogIn"/></a><br>
+				     <a href="/">
+				     <input class="btn btn-lg btn-success btn-block" value="Lets Go Home"/></a>
+                </div>
+                <div class="panel-footer">
+        			<a href="/">Home</a>&nbsp;&nbsp;
+        			<a href="/register">Register</a> &nbsp;&nbsp;&nbsp;SHATA&copy
+        		</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

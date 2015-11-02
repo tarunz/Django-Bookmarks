@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Save Bookmark{% endblock %}
+{% block head %}Save Bookmark{% endblock %}
+{% block content %}
+<div class="row vertical-offset-100">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form method="post" action='.'><center>
+                            {{ form.as_p }}
+							<input type="hidden" name="next" value="/"/></center>
+							<br>
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Save"/>
+                    </form>
+                </div>
+                <div class="panel-footer">
+        			<a href="/">Home</a>&nbsp;&nbsp;&nbsp;
+        			<a href="/register">Register</a>&nbsp;&nbsp;&nbsp;SHATA&copy
+        		</div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

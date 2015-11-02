@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+   {% block title %}Tag Cloud{% endblock %}
+   {% block head %}Tag Cloud{% endblock %}
+   {% block content %}
+    <div class="row vertical-offset-100">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-default">                               
+                                <div class="panel-body">
+                                  <center>
+                                     {% for tag in tags %}
+                                       <a href="/tag/{{ tag.name|urlencode }}/"
+                                       class="tag-cloud-{{ tag.weight }}">
+                                         {{ tag.name|escape }}</a>
+                                    {% endfor %}
+                                   </center>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+      
+     </div>
+   {% endblock %}
