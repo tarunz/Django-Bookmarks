@@ -8,10 +8,8 @@ Tag Cloud is created with help of previously generated tags from saved bookmarks
 Username:  Tarun  
 Password:  tarun
 
-Credits:
-
-1. [Sharanpreet Singh](https://github.com/Sharan-Lobana)
-
+Credits:  
+1. [Sharanpreet Singh](https://github.com/Sharan-Lobana)  
 2. [Tarun Kumar](https://github.com/tarunz)
 
 
